@@ -133,6 +133,51 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 ```
 </details>
 
+2. Следующие сетевые службы разрешены:
+<details>
+<summary>Разрешенные сетевые службы</summary>
+21/tcp   open  ftp         vsftpd 2.3.4  
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)  
+23/tcp   open  telnet      Linux telnetd  
+25/tcp   open  smtp        Postfix smtpd 
+53/tcp   open  domain      ISC BIND 9.4.2 
+80/tcp   open  http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)  
+111/tcp  open  rpcbind     2 (RPC #100000)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)  
+445/tcp  open  netbios-ssn Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)  
+512/tcp  open  exec        netkit-rsh rexecd  
+513/tcp  open  login  
+514/tcp  open  tcpwrapped  
+1099/tcp open  java-rmi    GNU Classpath grmiregistry  
+1524/tcp open  bindshell   Metasploitable root shell  
+2049/tcp open  nfs         2-4 (RPC #100003)  
+2121/tcp open  ftp         ProFTPD 1.3.1  
+3306/tcp open  mysql       MySQL 5.0.51a-3ubuntu5 
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7  
+5900/tcp open  vnc         VNC (protocol 3.3) 
+6000/tcp open  X11         (access denied)  
+6667/tcp open  irc         UnrealIRCd 
+8009/tcp open  ajp13       Apache Jserv (Protocol v1.3) 
+8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1 
+</details>
+
+3. Уязвимости и ссылки на них
+<details>
+<summary>Уязвимости и ссылки на них</summary>
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) 
+Проблема касается серверного компонента "integer overflow in nttrans reply". Уязвимость возникает из-за неправильной обработки целочисленных значений при чтении списка расширенных атрибутов (EA list) из входящего сетевого буфера. Когда серверный демон Samba читает этот список, существует возможность произойти переполнению целочисленного значения (integer overflow), что ведет к удаленному отказу в обслуживании (DoS) или даже к выполнению произвольного кода.
+
+[Samba 3.5.22/3.6.17/4.0.8 - nttrans Reply Integer Overflow](https://www.exploit-db.com/exploits/27778)
+1099/tcp open  java-rmi    GNU Classpath grmiregistry 
+Уязвимость позволяет удаленно выполнять код.  
+[OpenNMS - Java Object Unserialization Remote Code Execution (Metasploit)](https://www.exploit-db.com/exploits/40610)  
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7  
+Уязвимость PostgreSQL 8.3.6 в обработке кодировок при конвертации удаленной отказ в обслуживании (DoS) является проблемой безопасности, затрагивающей систему управления базами данных PostgreSQL. Эта уязвимость позволяет злоумышленнику удаленно вызвать отказ в обслуживании сервера PostgreSQL, отправляя специально сформированные запросы, связанные с конвертацией кодировок.
+[ostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service)](https://www.exploit-db.com/exploits/32849) 
+</details>
+
+
+
 ### Задание 2
 
 1. `Заполните здесь этапы выполнения, если требуется ....`
