@@ -4,9 +4,9 @@
 
 1. Просканировали Хост с помощью команды NMAP  
 
-
-
 <details>
+
+<summary>Нажмите, чтобы показать спойлер</summary>
 
 ```
 pergunovdv@debian:~$ nmap -A 192.168.0.2  
