@@ -136,6 +136,8 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 
 <details>
 <summary>2. Следующие сетевые службы разрешены:</summary>
+
+```
 21/tcp   open  ftp         vsftpd 2.3.4  
 22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)  
 23/tcp   open  telnet      Linux telnetd  
@@ -159,6 +161,8 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 6667/tcp open  irc         UnrealIRCd 
 8009/tcp open  ajp13       Apache Jserv (Protocol v1.3) 
 8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1 
+```
+
 </details>
 
 
