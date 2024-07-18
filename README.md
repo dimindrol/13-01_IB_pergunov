@@ -164,7 +164,8 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 
 <details>
 <summary>3. Уязвимости и ссылки на них:</summary>
-139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)   
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)  
+
 Проблема касается серверного компонента "integer overflow in nttrans reply". Уязвимость возникает из-за неправильной обработки целочисленных значений при чтении списка расширенных атрибутов (EA list) из входящего сетевого буфера. Когда серверный демон Samba читает этот список, существует возможность произойти переполнению целочисленного значения (integer overflow), что ведет к удаленному отказу в обслуживании (DoS) или даже к выполнению произвольного кода.  
 
 [Samba 3.5.22/3.6.17/4.0.8 - nttrans Reply Integer Overflow](https://www.exploit-db.com/exploits/27778)  
