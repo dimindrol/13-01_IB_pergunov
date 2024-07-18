@@ -164,16 +164,16 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 3. Уязвимости и ссылки на них
 <details>
 <summary>Уязвимости и ссылки на них</summary>
-139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP) 
-Проблема касается серверного компонента "integer overflow in nttrans reply". Уязвимость возникает из-за неправильной обработки целочисленных значений при чтении списка расширенных атрибутов (EA list) из входящего сетевого буфера. Когда серверный демон Samba читает этот список, существует возможность произойти переполнению целочисленного значения (integer overflow), что ведет к удаленному отказу в обслуживании (DoS) или даже к выполнению произвольного кода.
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)   
+Проблема касается серверного компонента "integer overflow in nttrans reply". Уязвимость возникает из-за неправильной обработки целочисленных значений при чтении списка расширенных атрибутов (EA list) из входящего сетевого буфера. Когда серверный демон Samba читает этот список, существует возможность произойти переполнению целочисленного значения (integer overflow), что ведет к удаленному отказу в обслуживании (DoS) или даже к выполнению произвольного кода.  
 
-[Samba 3.5.22/3.6.17/4.0.8 - nttrans Reply Integer Overflow](https://www.exploit-db.com/exploits/27778)
-1099/tcp open  java-rmi    GNU Classpath grmiregistry 
-Уязвимость позволяет удаленно выполнять код.  
-[OpenNMS - Java Object Unserialization Remote Code Execution (Metasploit)](https://www.exploit-db.com/exploits/40610)  
-5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7  
-Уязвимость PostgreSQL 8.3.6 в обработке кодировок при конвертации удаленной отказ в обслуживании (DoS) является проблемой безопасности, затрагивающей систему управления базами данных PostgreSQL. Эта уязвимость позволяет злоумышленнику удаленно вызвать отказ в обслуживании сервера PostgreSQL, отправляя специально сформированные запросы, связанные с конвертацией кодировок.
-[ostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service)](https://www.exploit-db.com/exploits/32849) 
+[Samba 3.5.22/3.6.17/4.0.8 - nttrans Reply Integer Overflow](https://www.exploit-db.com/exploits/27778)  
+1099/tcp open  java-rmi    GNU Classpath grmiregistry   
+Уязвимость позволяет удаленно выполнять код.    
+[OpenNMS - Java Object Unserialization Remote Code Execution (Metasploit)](https://www.exploit-db.com/exploits/40610)    
+5432/tcp open  postgresql  PostgreSQL DB 8.3.0 - 8.3.7    
+Уязвимость PostgreSQL 8.3.6 в обработке кодировок при конвертации удаленной отказ в обслуживании (DoS) является проблемой безопасности, затрагивающей систему управления базами данных PostgreSQL. Эта уязвимость позволяет злоумышленнику удаленно вызвать отказ в обслуживании сервера PostgreSQL, отправляя специально сформированные запросы, связанные с конвертацией кодировок.  
+[ostgreSQL 8.3.6 - Conversion Encoding Remote Denial of Service)](https://www.exploit-db.com/exploits/32849)   
 </details>
 
 
