@@ -4,6 +4,10 @@
 
 1. Просканировали Хост с помощью команды NMAP  
 <details>
+
+</details>
+
+```
 pergunovdv@debian:~$ nmap -A 192.168.0.2  
 Starting Nmap 7.93 ( https://nmap.org ) at 2024-07-18 19:59 +05  
 Nmap scan report for 192.168.0.2  
@@ -125,7 +129,7 @@ Host script results:
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .  
 Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds  
-</details>
+```
 
 
 ### Задание 2
