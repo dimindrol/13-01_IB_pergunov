@@ -2,11 +2,11 @@
 
 ### Задание 1
 
-1. Просканировали Хост с помощью команды NMAP  
+
 
 <details>
 
-<summary>Нажмите, чтобы показать спойлер</summary>
+<summary>1. Просканировали Хост с помощью команды NMAP  </summary>
 
 ```
 pergunovdv@debian:~$ nmap -A 192.168.0.2  
@@ -133,9 +133,9 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 ```
 </details>
 
-2. Следующие сетевые службы разрешены:
+
 <details>
-<summary>Разрешенные сетевые службы</summary>
+<summary>2. Следующие сетевые службы разрешены:</summary>
 21/tcp   open  ftp         vsftpd 2.3.4  
 22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)  
 23/tcp   open  telnet      Linux telnetd  
@@ -161,9 +161,9 @@ Nmap done: 1 IP address (1 host up) scanned in 24.17 seconds
 8180/tcp open  http        Apache Tomcat/Coyote JSP engine 1.1 
 </details>
 
-3. Уязвимости и ссылки на них
+
 <details>
-<summary>Уязвимости и ссылки на них</summary>
+<summary>3. Уязвимости и ссылки на них:</summary>
 139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)   
 Проблема касается серверного компонента "integer overflow in nttrans reply". Уязвимость возникает из-за неправильной обработки целочисленных значений при чтении списка расширенных атрибутов (EA list) из входящего сетевого буфера. Когда серверный демон Samba читает этот список, существует возможность произойти переполнению целочисленного значения (integer overflow), что ведет к удаленному отказу в обслуживании (DoS) или даже к выполнению произвольного кода.  
 
